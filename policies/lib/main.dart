@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:policies/politicas/termos.dart';
 
 import 'politicas/cookies.dart';
 import 'politicas/pagamentos.dart';
@@ -39,13 +40,13 @@ class _PoliciesState extends State<Policies> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: width * .02,
+                  height: 15,
                 ),
                 temaNegrito(
                     text:
                         "POLÍTICA DE PRIVACIDADE E TERMOS DE USO PARA A PLATAFORMA"),
                 SizedBox(
-                  height: width * .02,
+                  height: 15,
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: width * .25),
@@ -75,11 +76,11 @@ class _PoliciesState extends State<Policies> {
                   ),
                 ),
                 SizedBox(
-                  height: width * .02,
+                  height: 15,
                 ),
                 titleNegrito(text: 'Atualizações'),
                 SizedBox(
-                  height: width * .02,
+                  height: 15,
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: width * .25),
@@ -93,41 +94,23 @@ class _PoliciesState extends State<Policies> {
                   ),
                 ),
                 SizedBox(
-                  height: width * .02,
+                  height: 15,
                 ),
                 Cookies(),
                 SizedBox(
-                  height: width * .02,
+                  height: 15,
                 ),
                 Pagamentos(),
                 SizedBox(
-                  height: width * .02,
-                ),
-                titleNegrito(text: 'Leis'),
-                SizedBox(
-                  height: width * .02,
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: width * .25),
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(children: [
-                      textSpanDefault(
-                          text:
-                              "- Lei Geral de Proteção de Dados (LGPD) Lei nº 13.709, de 14 de agosto de 2018."),
-                      textSpanDefault(text: "\n\n"),
-                      textSpanDefault(
-                          text:
-                              "Art. 1º Esta Lei dispõe sobre o tratamento de dados pessoais, inclusive nos meios digitais, por pessoa natural ou por pessoa jurídica de direito público ou privado, com o objetivo de proteger os direitos fundamentais de liberdade e de privacidade e o livre desenvolvimento da personalidade da pessoa natural."),
-                    ]),
-                  ),
-                ),
-                SizedBox(
-                  height: width * .02,
+                  height: 15,
                 ),
                 PoliticaDados(),
                 SizedBox(
-                  height: width * .02,
+                  height: 15,
+                ),
+                Termos(),
+                SizedBox(
+                  height: 15,
                 ),
               ],
             )),
@@ -136,36 +119,43 @@ class _PoliciesState extends State<Policies> {
   }
 
   textSpanDefault({required String text}) {
-    double width = MediaQuery.of(context).size.width;
-
-    return TextSpan(text: text, style: TextStyle(fontSize: width * .011));
+    return TextSpan(text: text, style: TextStyle(fontSize: 15));
   }
 
   textSpanDefaultNegrito({required String text}) {
-    double width = MediaQuery.of(context).size.width;
-
     return TextSpan(
         text: text,
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: width * .011));
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15));
   }
 
   temaNegrito({required String text}) {
-    double width = MediaQuery.of(context).size.width;
-
     return Container(
         child: Text(
       text,
-      style: TextStyle(fontSize: width * .02, fontWeight: FontWeight.bold),
+      textAlign: TextAlign.justify,
+      style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
     ));
   }
 
   titleNegrito({required String text}) {
-    double width = MediaQuery.of(context).size.width;
     return Container(
         child: Text(
       text,
+      textAlign: TextAlign.justify,
       style: TextStyle(
-        fontSize: width * .015,
+        fontSize: 25,
+        fontWeight: FontWeight.bold,
+      ),
+    ));
+  }
+
+  subtitleNegrito({required String text}) {
+    return Container(
+        child: Text(
+      text,
+      textAlign: TextAlign.justify,
+      style: TextStyle(
+        fontSize: 20,
         fontWeight: FontWeight.bold,
       ),
     ));
