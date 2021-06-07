@@ -48,51 +48,11 @@ class _PoliciesState extends State<Policies> {
                 SizedBox(
                   height: 15,
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: width * .25),
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(children: [
-                      textSpanDefaultNegrito(text: "Política de privacidade "),
-                      textSpanDefault(
-                          text:
-                              "é um conjunto de termos que descreve as práticas adotadas pelo site ou aplicativo em relação às informações dos usuários. Sua função é esclarecer ao visitante como os dados serão utilizados e qual a sua finalidade, ou seja, essa política é o documento que explica a todos os interessados do aplicativo a forma como os dados pessoais dos usuários e visitante da plataforma serão tratados."),
-                      textSpanDefault(text: "\n\n"),
-                      textSpanDefault(text: "Dessa forma, nós do "),
-                      TextSpan(
-                          text: "Vip List ",
-                          style: TextStyle(fontWeight: FontWeight.bold)),
-                      textSpanDefault(
-                          text:
-                              "damos relevância à importância que nós temos pelos seus dados e segurança (tanto física quanto digital) , a qual se mantém como nossa maior prioridade."),
-                      textSpanDefault(text: "\n\n"),
-                      textSpanDefault(text: "Por meio do documento de "),
-                      textSpanDefaultNegrito(
-                          text: "Termos e Condições de Uso, "),
-                      textSpanDefault(
-                          text:
-                              "um site ou um aplicativo explica aos usuários quais são as condições de utilização do serviço disponibilizado, seja ele gratuito ou pago. Nesse sentido, servem para indicar as regras que devem ser respeitadas ao utilizar a plataforma, informando obrigações e direitos dos usuários assim como da plataforma, uma vez que o mesmo serve como uma especie de contrato de adesão"),
-                    ]),
-                  ),
-                ),
+                Termos(),
                 SizedBox(
                   height: 15,
                 ),
-                titleNegrito(text: 'Atualizações'),
-                SizedBox(
-                  height: 15,
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: width * .25),
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(children: [
-                      textSpanDefault(
-                          text:
-                              "Dessa forma, vale ressaltar que o aplicativo está sujeito à atualizações dentro de seu funcionamento interno. De maneira que poderá a qualquer tempo ter seu conteúdo ou parte dele modificados para adequações e inserções todo com vistas ao aprimoramento dos serviços disponibilizados. Deste modo, qualquer tipo de mudança será previamente ou não avisada aos usuários."),
-                    ]),
-                  ),
-                ),
+                PoliticaDados(),
                 SizedBox(
                   height: 15,
                 ),
@@ -101,14 +61,6 @@ class _PoliciesState extends State<Policies> {
                   height: 15,
                 ),
                 Pagamentos(),
-                SizedBox(
-                  height: 15,
-                ),
-                PoliticaDados(),
-                SizedBox(
-                  height: 15,
-                ),
-                Termos(),
                 SizedBox(
                   height: 15,
                 ),
